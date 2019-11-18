@@ -1,0 +1,11 @@
+<div class="form-group">
+        <label for="exampleFormControlSelect1">Example select</label>
+        <select class="form-control">
+            <option [value]="lab.name" *ngFor="let lab of labs">{{lab.name}}</option>
+        </select>
+      </div>
+
+      <input [(ngModel)]="sala.fecha" type="date" name="bday">
+
+      <button (click)="createSolicitud()" class="btn btn-primary">Create</button>
+

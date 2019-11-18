@@ -1,0 +1,78 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light bg-faded">
+    <a class="navbar-brand" href="#">U. LIBRE.</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+
+<nav class="navbar navbar-light bg-light">
+    <a class="navbar-brand" href="#">
+      <img src="assets/img/A-64.png" width="30" height="30" alt="">
+    </a>
+  </nav>
+
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+
+      <ul class="navbar-nav mr-auto">
+
+          <!--localStorage.setItem("sesioniniciada", "ok");-->
+
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" [routerLink]="['LOGIN']">LOGIN</a>
+        </li>
+
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" [routerLink]="['UNIVERSITY']" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              UNIVERSITY
+            </a>
+
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" [routerLink]="['Crearfbl']" href="#">Crear Facultad/Bloque/Laboratorio</a>
+                <a class="dropdown-item" [routerLink]="['Consultarfbl']" href="#">Consultar Facultad/Bloque/Laboratorio</a>
+                <div class="dropdown-divider"></div>
+                <!--a class="dropdown-item" href="#">Something else here</a-->
+              </div>
+
+
+        <li class="nav-item dropdown"> 
+            <a class="nav-link dropdown-toggle" [routerLink]="['LABS']" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              LABS
+            </a>
+            
+            <div  class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" [routerLink]="['Solicitarsala']" href="#">Solicitar Sala</a>
+                <a class="dropdown-item" [routerLink]="['Listarsolicitudes']" href="#">Listar Solicitudes</a>  
+                <a class="dropdown-item" [routerLink]="['Listarsolicitudespropias']" href="#">Listar Solicitudes Propias</a>
+                <a class="dropdown-item" [routerLink]="['Aprobaciondenegacion']" href="#">Aprobacion/Denegacion</a>
+                <a class="dropdown-item" [routerLink]="['Calendariolaboratorio']" href="#">Calendario Laboratorio</a>
+              </div>
+
+
+          <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" [routerLink]="['USERS']" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                USERS
+                
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" [routerLink]="['CrearUsuarios']" href="#">Crear Usuarios</a>
+                  <a class="dropdown-item" [routerLink]="['ConsultarUsuarios']" href="#">Consultar Usuarios</a>  
+                  <!--a class="dropdown-item" [routerLink]="['ListarUsuarios']" href="#">Listar Usuarios</a-->
+                  <!--a class="dropdown-item" [routerLink]="['EliminarUsuarios']" href="#">Eliminar Usuarios</a-->
+                </div>
+        </li>
+      </ul>
+
+      <div>
+          <form class="form-inline my-2 my-lg-0">
+              <input class="form-control mr-sm-2" type="search" placeholder="Search" (keyup.enter)="buscar(buscarTexto.value)" #buscarTexto>
+              <button (click)="buscar(buscarTexto.value)"
+                class="btn btn-outline-success my-2 my-sm-0" type="button">Search</button>
+              <button  (click)="logout()"
+                class="btn btn-outline-success- my-2 my-sm-0" type="button">Logout</button>
+                
+            </form>
+      </div>
+    </div>
+  </nav>

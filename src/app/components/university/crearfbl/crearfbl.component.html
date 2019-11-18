@@ -1,0 +1,44 @@
+<form>
+        <div>
+          <label for="exampleInputEmail1">NAME FACULTY</label>
+          <input name="name" type="text" class="form-control" [(ngModel)]="facultad.name" placeholder="Enter Faculty">
+        </div>
+        <div>
+          <label for="exampleInputPassword1">Description</label>
+          <input name="desc" type="text" class="form-control" [(ngModel)]="facultad.desc" placeholder="Description">
+        </div>
+        <button (click)="createFacult()" class="btn btn-primary">Create Faculty</button>
+      </form>
+      <br>
+      <br>
+
+
+      <form>
+            <div class="form-group">
+              <label for="exampleInputEmail1">NAME BUILDING</label>
+              <input name="bloquename" type="email" class="form-control"  [(ngModel)]="bloque.name" placeholder="Enter Building">
+              <small id="emailHelp" class="form-text text-muted"></small>
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Description</label>
+              <input name="bloquedesc" type="text" class="form-control" [(ngModel)]="bloque.desc" placeholder="Description">
+            </div>
+            <button (click)="createBloque()" class="btn btn-primary">Created Building</button>
+          </form>
+          <br>
+          <br>
+    
+    
+          <form>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">NAME LABORATORY</label>
+                  <input name="laboraname" type="text" class="form-control" [(ngModel)]="laboratorio.name" placeholder="Enter Laboratory">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Description</label>
+                  <input type="text" name="laboradesc" class="form-control" [(ngModel)]="laboratorio.desc" placeholder="Description">
+                </div>
+                <button (click)="createLaboratory()" class="btn btn-primary">Created Laboratory</button>
+              </form>
+              <br>
+          <br>

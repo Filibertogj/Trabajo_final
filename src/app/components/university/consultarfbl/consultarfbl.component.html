@@ -1,0 +1,53 @@
+<h1>Facultad</h1>
+          <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Eliminar</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let facultad of facultades">
+                    <th scope="row"><button (click)="detalleFacultad(facultad.id)">{{facultad.id}}</button></th>
+                    <td>{{facultad.name}}</td>
+                    <td><button (click)="eliminarFacultad(facultad.id)">Eliminar</button></td>
+                  </tr>
+                </tbody>
+              </table>
+
+<h1>bloque</h1>
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Name</th>
+        <th scope="col">Eliminar</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let bloque of bloques">
+        <th scope="row"><button (click)="detalleBloque(bloque.id)">{{bloque.id}}</button></th>
+        <td>{{bloque.name}}</td>
+        <td><button (click)="eliminarBloque(bloque.id)">Eliminar</button></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h1>Laboratorios</h1>
+  <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Id</th>
+          <th scope="col">Name</th>
+          <th scope="col">Eliminar</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let laboratorio of laboratorios">
+          <th scope="row"><button (click)="detalleLaboratorio(laboratorio.id)">{{laboratorio.id}}</button></th>
+          <td>{{laboratorio.name}}</td>
+          <td><button (click)="eliminarLaboratorio(laboratorio.id)">Eliminar</button></td>
+        </tr>
+      </tbody>
+    </table>

@@ -1,0 +1,24 @@
+<h1>Listado de solicitud de laboratorios</h1>
+          <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Usuario</th>
+                    <th scope="col">Fecha solicitud</th>
+                    <th scope="col">estado aprobacion</th>
+                    <th scope="col">Aprobar</th>
+                    <th scope="col">Denegar</th>
+
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let solicitud of solicitudes">
+                    <th scope="row"><button (click)="detalleSolicitud(solicitud.idsolicitud)">{{solicitud.idsolicitud}}</button></th>
+                    <td>{{solicitud.usuario}}</td>
+                    <td>{{solicitud.fecha}}</td>
+                    <td>{{solicitud.aprobacion}}</td>
+                    <td><button (click)="aprobarSolicitud(solicitud.idsolicitud)">Aprobar</button></td>
+                    <td><button (click)="eliminarSolicitud(solicitud.idsolicitud)">Denegar</button></td>
+                  </tr>
+                </tbody>
+              </table>
